@@ -9,8 +9,58 @@
     <title>Forest</title>
 </head>
 
-<body>
-    <h1 class="bg-red-700">afae</h1>
+<body class="bg-forest-800 font-sans mb-96">
+    <div class="container mt-4 flex justify-center md:justify-start">
+        <div class="flex items-center ">
+            <span class="size-3 rounded-full bg-forest-300 border-2 border-forest-800 relative left-[0.375rem]"></span>
+            <div class="text-forest-300 flex *:bg-forest-900 divide-x-2 divide-forest-800 *:px-4 *:py-2 ">
+                <div class="rounded-l-md capitalize" id="dia">terça</div>
+                <div id="temperatura">29°</div>
+                <div class="rounded-r-md" id="tempo">🌤️</div>
+            </div>
+        </div>
+    </div>
+    <header class="container flex items-center justify-between gap-8 py-8">
+        <a href="./"><img src="./src/imgs/forest.svg" alt="Forest"></a>
+        <nav>
+            <ul
+                class="text-forest-100 text-xl flex flex-wrap gap-8 border-forest-800 *:*:hover:underline *:*:underline-offset-8">
+                <li><a href="#acomodacoes">Acomodações</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#experiencias">Experiências</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+
+
+    </header>
+    <main class="container">
+        <div
+            class=" text-forest-100 relative pt-64 px-8 pb-8 rounded-2xl overflow-hidden bg-gradient-to-t from-forest-950/80">
+            <img src="./src/imgs/floresta.jpg" alt="floresta" class="absolute inset-0 -z-10 size-full object-cover">
+            <div class="bg-forest-950 inline-flex gap-8 items-center rounded-full py-1 pr-1 pl-4 mb-8">
+                vagas para dezembro abertas
+                <a href="#" class="text-forest-950 bg-forest-400 rounded-full py-2 px-4 inline-block ">Reserve
+                    Hoje</a>
+            </div>
+            <h1 class="font-serif text-5xl max-w-screen-sm text-balance mb-20">Venha Experimentar a Vida na Floresta
+            </h1>
+            <div class="text-sm flex justify-between items-end">
+                <p>Melhores lugares para visitar <a href="./"
+                        class="underline decoration-2 underline-offset-4 hover:no-underline">2049</a>
+                </p>
+                <div>
+                    <p class="uppercase mb-2">Recomendado por</p>
+                    <p class="flex items-center gap-4">
+                        <img src="./src/imgs/parceiros/wildbeast.svg" alt="wildbeast" class="w-28">
+                        <span>|</span>
+                        Revista Nacional
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
