@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-forest-50: #e5e7eb;
+  /* #e5e7eb */
+  --color-forest-50: #99a1af;
   --color-forest-100: white;
   --color-forest-200: #acef75;
   --color-forest-300: #91ee77;
