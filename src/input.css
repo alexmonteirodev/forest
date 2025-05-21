@@ -41,3 +41,18 @@
 @utility container {
   margin: auto;
 }
+
+@layer components {
+  .neon {
+    @apply rounded-full border border-forest-200 bg-gradient-to-b from-forest-200 to-forest-400 text-forest-900 shadow-[0_1px_4px_1px] shadow-forest-200/25;
+  }
+  .input {
+    @apply rounded-md border-forest-800 bg-forest-800 p-2 text-forest-50 focus:outline-none focus:ring-2 focus:ring-forest-400 focus:border-forest-900 placeholder:text-forest-900;
+  }
+  .radial-gradient {
+    @apply bg-radial-[50%_100%_at_50%_0%] from-forest-700 to-forest-800;
+  }
+  .btn {
+    @apply rounded-full border border-forest-200 bg-gradient-to-b from-forest-200 to-forest-400 text-forest-900 shadow-[0_1px_4px_1px] shadow-forest-200/25 px-5 py-2 trasition hover:contrast-200;
+  }
+}
