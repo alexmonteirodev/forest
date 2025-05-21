@@ -15,8 +15,8 @@
             <span class="size-3 rounded-full bg-forest-300 border-2 border-forest-800 relative left-[0.375rem]"></span>
             <div class="text-forest-300 flex *:bg-forest-900 divide-x-2 divide-forest-800 *:px-4 *:py-2 ">
                 <div class="rounded-l-md capitalize" id="dia">terça</div>
-                <div id="temperatura">29°</div>
-                <div class="rounded-r-md" id="tempo">🌤️</div>
+                <div id="temperatura"></div>
+                <div class="rounded-r-md" id="tempo"></div>
             </div>
         </div>
     </div>
@@ -55,7 +55,10 @@
     <main class="container">
         <div
             class=" text-forest-100 relative pt-64 max-sm:pt-12 px-8 max-sm:px-4  pb-8 rounded-2xl overflow-hidden bg-gradient-to-t from-forest-950/80">
-            <img src="./src/imgs/floresta.jpg" alt="floresta" class="absolute inset-0 -z-10 size-full object-cover">
+            <!-- <img src="./src/imgs/floresta.jpg" alt="floresta" class="absolute inset-0 -z-10 size-full object-cover"> -->
+            <video id="video" src="./src/imgs/video_chuva.mp4"
+                class="absolute inset-0 -z-10 size-full object-cover animate-fadeIn" muted autoplay loop playsinline
+                width="1280" height="720"></video>
             <div
                 class="bg-forest-950/60 sm:bg-forest-950 sm:inline-flex sm:flex-row sm:gap-8 sm:items-center rounded-xl sm:rounded-full py-1 pr-1 pl-4 mb-8 flex flex-col gap-2 items-start">
                 Vagas para dezembro abertas
@@ -357,6 +360,21 @@
     </footer>
 
     <script>
+        const video = document.querySelector('#video')
+        const dia = document.querySelector('#dia')
+        const temperatura = document.querySelector('#temperatura')
+        const tempo = document.querySelector('#tempo')
+        const random = Math.floor(Math.random() * 10) + 20
+        const date = new Date()
+
+        temperatura.innerText = `${random}°`
+        tempo.innerText = random < 25 ? `🌧️ ${random + 5}%` : `🌤️`
+        dia.innerText = date.toLocaleDateString('pt-BR', {
+            weekday: 'long',
+        })
+        video.src = random < 25 ? './src/imgs/video_chuva.mp4' : './src/imgs/video_sol.mp4'
+
+
         const mobileButton = document.querySelector('#mobile-button')
         const mobileMenu = document.querySelector('#mobile-menu')
 
