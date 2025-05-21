@@ -22,15 +22,27 @@
     </div>
     <header class="container flex items-center justify-between gap-8 py-8">
         <a href="./"><img src="./src/imgs/forest.svg" alt="Forest"></a>
-        <nav>
+        <nav id="mobile-menu" class="lg:block max-lg:fixed max-lg:w-full max-lg:inset-0 z-40 items-center hidden">
+            <div class="fixed max-lg:inset-0 bg-forest-950/40 backdrop-blur-md lg:backdrop-blur-none">
+                <!-- inset-0 pra que fique de ponta a ponta em todos os lados -->
+            </div>
             <ul
-                class="text-forest-100 text-xl flex flex-wrap gap-8 border-forest-800 *:*:hover:underline *:*:underline-offset-8">
-                <li><a href="#acomodacoes">Acomodações</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#experiencias">Experiências</a></li>
-                <li><a href="#contato">Contato</a></li>
+                class="text-forest-100 text-2xl lg:text-xl lg:flex flex-wrap gap-8 border-forest-800 lg:*:*:hover:underline lg:*:*:underline-offset-8 max-lg:z-50  max-lg:divide-y-2 max-lg:divide-forest-100/10 max-lg:absolute max-lg:w-full max-lg:p-4 max-lg:flex max-lg:flex-col max-lg:*:pb-4">
+                <li><a href="#acomodacoes" class="lg:px-0 lg:py-2 block max-lg:hover:bg-forest-100/10">Acomodações</a>
+                </li>
+                <li><a href="#eventos" class="lg:px-0 lg:py-2 block max-lg:hover:bg-forest-100/10">Eventos</a></li>
+                <li><a href="#experiencias" class="lg:px-0 lg:py-2 block max-lg:hover:bg-forest-100/10">Experiências</a>
+                </li>
+                <li><a href="#contato" class="lg:px-0 lg:py-2 block max-lg:hover:bg-forest-100/10">Contato</a></li>
             </ul>
         </nav>
+        <button id="mobile-button"
+            class="text-forest-950 bg-forest-400 rounded-full py-2 px-4 flex items-center gap-3 lg:hidden">
+            Menu
+            <span class="h-3 w-4 flex flex-col justify-between *:h-0.5 *:rounded-md *:bg-forest-800">
+                <span></span><span></span><span></span>
+            </span>
+        </button>
 
 
 
@@ -338,6 +350,20 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        const mobileButton = document.querySelector('#mobile-button')
+        const mobileMenu = document.querySelector('#mobile-menu')
+
+        mobileButton.addEventListener('click', () => {
+            mobileMenu.classList.add('flex')
+            mobileMenu.classList.remove('hidden')
+        })
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden')
+            mobileMenu.classList.remove('flex')
+        })
+    </script>
 </body>
 
 </html>
